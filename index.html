@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Комплімент для коханої</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    #compliment {
+      font-size: 1.5em;
+      margin: 20px;
+      padding: 0 20px;
+    }
+    button {
+      background-color: #1e1e1e;
+      color: #fff;
+      border: 2px solid #444;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #333;
+      border-color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Комплімент для моєї чарівної</h1>
+  <div id="compliment">Натисни кнопку, щоб отримати комплімент ❤️</div>
+  <button onclick="generateCompliment()">Отримати комплімент</button>
+
+  <script>
+    const compliments = [
+      "Твій розум – це справжній магніт, який вабить мене щодня.",
+      "Твої кучері — як казкові хвилі, в яких хочеться загубитись.",
+      "Очі кольору бурштину світяться теплом, що зігріває серце.",
+      "Твоя енергія надихає мене ставати кращим кожного дня.",
+      "У кожному твоєму русі — витонченість і впевненість.",
+      "Кожна твоя думка — витвір інтелектуальної краси.",
+      "У тобі поєднується ніжність і мудрість, і це просто неймовірно.",
+      "Твоя усмішка здатна розтопити будь-який лід у серці.",
+      "Ти — моя муза, мій спокій і моє натхнення.",
+      "Твоя чарівність — це не магія. Це ти справжня. І це диво."
+    ];
+
+    function generateCompliment() {
+      const index = Math.floor(Math.random() * compliments.length);
+      document.getElementById("compliment").innerText = compliments[index];
+    }
+  </script>
+</body>
+</html>
